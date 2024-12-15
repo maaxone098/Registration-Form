@@ -170,6 +170,10 @@ input[type='checkbox']:checked:after {
     border: 2px solid white;
 }
 
+#address, #date{
+    color: white;
+}
+
 button{
     margin-top: 50px;
     border: 2px solid var(--grey);
