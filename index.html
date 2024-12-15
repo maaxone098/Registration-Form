@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="icon" href="logo.png">
+</head>
+<body>
+    <div class="form-container">
+        <h2>Registration Form</h2>
+        <form id="registrationForm" method="POST" action="process.php">
+            <label class="label" for="name">full name </label>
+            <input class="inputs" type="text" id="name" name="name" placeholder="your name" required>
+            <label class="label" for="email">email</label>
+            <input class="inputs" type="email" id="email" name="email" placeholder="email" required pattern=".+@gmail\.com">
+            <label for="phone">phone</label>
+            <input type="tel" name="phone" id="phone" placeholder="phone number" required>
+            <label class="label" for="gender">gender</label>
+            <div class="gender" >
+                <input id="male" type="radio" name="gender" value="male"><label for="male">male</label>
+                <input id="female" type="radio" name="gender" value="female"><label for="female">female</label>
+            </div>
+            <label class="label" for="dob" >date of birth</label>
+            <input class="inputs" type="date" name="date" id="date" required>
+            <label class="country" for="country">country</label>
+            <div class="select-country">
+                <select name="country" id="country">
+                    <option value="ind">india</option>
+                    <option value="uk">united kingdom</option>
+                    <option value="can">canada</option>
+                    <option value="aus">australia</option>
+                    <option value="other">other</option>
+                </select>
+            </div>
+            <label class="label" for="interests">interests</label>
+            <div class="interests">
+                <input type="checkbox" name="interests[]" class="inputs" value="sport">sport
+                <input type="checkbox" name="interests[]" class="inputs" value="music">music
+                <input type="checkbox" name="interests[]" class="inputs" value="reading">reading
+                <input type="checkbox" name="interests[]" class="inputs" value="travel">travel
+            </div>
+            <label class="label" for="address">address</label>
+            <textarea name="address" id="address" placeholder="enter address..." required></textarea>
+            <button type="submit">Submit</button>
+            <div id="output"></div>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
